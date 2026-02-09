@@ -1,10 +1,9 @@
 class TeamsVolume < Formula
   desc "Per-app volume control for Microsoft Teams on macOS menu bar"
   homepage "https://github.com/bahmetpalanci/teams-volume"
-  url "https://github.com/bahmetpalanci/teams-volume/archive/refs/heads/v1.0.0.tar.gz"
+  url "https://github.com/bahmetpalanci/teams-volume/archive/refs/tags/v1.0.0.tar.gz"
   sha256 "e41f4877ea10114d438a8867f7ea7ff49428ff35a0c460db8bb4f3656ec08bb0"
   license "MIT"
-  version "1.0.0"
   head "https://github.com/bahmetpalanci/teams-volume.git", branch: "main"
 
   depends_on :macos
