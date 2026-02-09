@@ -1,8 +1,8 @@
 class MicMute < Formula
   desc "One-click microphone mute/unmute for macOS menu bar"
   homepage "https://github.com/bahmetpalanci/mic-mute"
-  url "https://github.com/bahmetpalanci/mic-mute/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "00a4d246851132a9a8b1963369f91550e386bf18907c63bc26be5cb2fb63dfca"
+  url "https://github.com/bahmetpalanci/mic-mute/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "9f4d49bdfb1eea26fefcadae06ad0654317282f6e960ca078867da444b0f489a"
   license "MIT"
   head "https://github.com/bahmetpalanci/mic-mute.git", branch: "main"
 
@@ -14,8 +14,12 @@ class MicMute < Formula
 
     app_dir = prefix/"MicMute.app/Contents"
     (app_dir/"MacOS").mkpath
+    (app_dir/"Resources").mkpath
     cp "MicMute", app_dir/"MacOS/MicMute"
     cp "MicMute.app/Contents/Info.plist", app_dir/"Info.plist"
+    cp "MicMute.app/Contents/Resources/AppIcon.icns", app_dir/"Resources/AppIcon.icns"
+
+    system "codesign", "--force", "--deep", "--sign", "-", prefix/"MicMute.app"
 
     bin.install_symlink app_dir/"MacOS/MicMute"
   end
