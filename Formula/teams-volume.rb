@@ -1,8 +1,8 @@
 class TeamsVolume < Formula
   desc "Per-app volume control for Microsoft Teams on macOS menu bar"
   homepage "https://github.com/bahmetpalanci/teams-volume"
-  url "https://github.com/bahmetpalanci/teams-volume/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "c39b35ab91d1d7f26c22b18946eda790377acb411a3732b1bc6b08fe200cb7b1"
+  url "https://github.com/bahmetpalanci/teams-volume/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "4a2de22339fcf83a565621a3b0220211b3b2161f39d5da704a84ee9f09dc3034"
   license "MIT"
   head "https://github.com/bahmetpalanci/teams-volume.git", branch: "main"
 
@@ -54,6 +54,14 @@ class TeamsVolume < Formula
         Left-click the menu bar icon to show volume slider
         Drag slider to adjust Teams volume (0-100%)
         Right-click for quit menu
+
+      Disclaimer:
+        This software is provided as-is, without warranty of any kind.
+        TeamsVolume is not affiliated with Microsoft Corporation or Apple Inc.
+        "Microsoft Teams" is a trademark of Microsoft Corporation.
+        When using Bluetooth headsets during calls, macOS may switch to
+        the lower-quality HFP codec. This is a macOS/Bluetooth limitation.
+        TeamsVolume does not collect, transmit, or store any personal data.
     EOS
   end
 

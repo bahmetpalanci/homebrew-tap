@@ -1,8 +1,8 @@
 class MicMute < Formula
   desc "One-click microphone mute/unmute for macOS menu bar"
   homepage "https://github.com/bahmetpalanci/mic-mute"
-  url "https://github.com/bahmetpalanci/mic-mute/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "9f4d49bdfb1eea26fefcadae06ad0654317282f6e960ca078867da444b0f489a"
+  url "https://github.com/bahmetpalanci/mic-mute/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "1be4306938473f2d2c0f1e17bb2fc6f43b826a514f2364d6039fdb9e91556881"
   license "MIT"
   head "https://github.com/bahmetpalanci/mic-mute.git", branch: "main"
 
@@ -10,7 +10,8 @@ class MicMute < Formula
   depends_on xcode: ["12.0", :build]
 
   def install
-    system "swiftc", "MicMute.swift", "-o", "MicMute", "-framework", "Cocoa", "-O"
+    system "swiftc", "MicMute.swift", "-o", "MicMute",
+           "-framework", "Cocoa", "-framework", "CoreAudio", "-O"
 
     app_dir = prefix/"MicMute.app/Contents"
     (app_dir/"MacOS").mkpath
@@ -41,6 +42,11 @@ class MicMute < Formula
       Usage:
         Left-click the menu bar icon to toggle mute/unmute
         Right-click for quit menu
+
+      Disclaimer:
+        This software is provided as-is, without warranty of any kind.
+        MicMute is not affiliated with Apple Inc. or any other company.
+        It does not collect, transmit, or store any personal data.
     EOS
   end
 
