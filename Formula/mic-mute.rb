@@ -1,8 +1,8 @@
 class MicMute < Formula
   desc "One-click microphone mute/unmute for macOS menu bar"
   homepage "https://github.com/bahmetpalanci/mic-mute"
-  url "https://github.com/bahmetpalanci/mic-mute/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "1be4306938473f2d2c0f1e17bb2fc6f43b826a514f2364d6039fdb9e91556881"
+  url "https://github.com/bahmetpalanci/mic-mute/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "99df49b0a52566e4bb8ba7d0e52485a53b35951efd8f2f7112e9d89029d30412"
   license "MIT"
   head "https://github.com/bahmetpalanci/mic-mute.git", branch: "main"
 
