@@ -1,8 +1,8 @@
 class TeamsAlert < Formula
   desc "Custom alert sounds for Microsoft Teams contacts - macOS menu bar app"
   homepage "https://github.com/bahmetpalanci/teams-alert"
-  url "https://github.com/bahmetpalanci/teams-alert/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "ab9c62e05a4da4f7121b999b55e78e7cdac7e2924d9bfcfc8e283eca40503cbe"
+  url "https://github.com/bahmetpalanci/teams-alert/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "42d6ed8ffcc995329417c883483783a2f76ca1511ad2d2ab633d2ea760c6a5f8"
   license "MIT"
   head "https://github.com/bahmetpalanci/teams-alert.git", branch: "main"
 
@@ -49,7 +49,9 @@ class TeamsAlert < Formula
 
       How it works:
         Monitors Microsoft Teams log files for new chat notifications.
-        Uses Accessibility API to read sender names from notification banners.
+        Plays a distinct alert sound after a configurable delay (default 3s)
+        so you can tell it apart from Teams' own notification sound.
+        Sound repeats 3x by default for emphasis.
         No Azure registration or OAuth login required.
     EOS
   end
